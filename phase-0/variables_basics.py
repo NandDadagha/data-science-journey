@@ -1,12 +1,19 @@
+# This script demonstrates basic Python variables and data types.
+# It prints values and their corresponding types.
+
 name = "Nand"
 age = 19
 cgpa = 9.5
 is_learning_data_science = True
-print("Name: ", name)
+
+print("Name:", name)
 print("Type of name:", type(name))
-print("Age: ", age)
+
+print("Age:", age)
 print("Type of age:", type(age))
-print("CGPA: ", cgpa)
+
+print("CGPA:", cgpa)
 print("Type of CGPA:", type(cgpa))
-print("Is learning Data Science: ", is_learning_data_science)
+
+print("Is learning Data Science:", is_learning_data_science)
 print("Type of is_learning_data_science:", type(is_learning_data_science))
