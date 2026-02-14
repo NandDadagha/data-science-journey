@@ -27,3 +27,8 @@ print("\nPredictions on test set:")
 print(predictions)
 print("\nActual scores on test set:")
 print(y_test.values)
+
+print("Hours coefficient: ", model.coef_[0])
+print("Sleep coefficient: ", model.coef_[1])
+print("Model intercept:")
+print(model.intercept_)
