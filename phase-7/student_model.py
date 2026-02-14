@@ -1,5 +1,6 @@
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+import joblib
 import pandas as pd
 data = {
     "hours": [1,2,3,4,5,6,7,8],
@@ -32,3 +33,11 @@ print("Hours coefficient: ", model.coef_[0])
 print("Sleep coefficient: ", model.coef_[1])
 print("Model intercept:")
 print(model.intercept_)
+
+joblib.dump(model, "student_score_model.pkl")
+print("\nModel saved as 'student_score_model.pkl'")
+loaded_model = joblib.load("student_score_model.pkl")
+print("\nModel loaded successfully.")
+
+prediction = loaded_model.predict([[6, 5]])
+print("Prediction for 6 hours of study and 5 hours of sleep:", prediction[0])
